@@ -41,7 +41,6 @@ You can reach me via:
     <span class="chip">Artificial Intelligence</span>
     <span class="chip">Foundations of Cryptocurrencies</span>
     <span class="chip">Signals & Systems</span>
-    <span class="chip">Algorithms</span>
   </div>
 </div>
 
