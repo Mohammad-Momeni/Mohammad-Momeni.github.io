@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: "Curriculum Vitae"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -62,9 +62,6 @@ Teaching
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams -->
-
-
-## Curriculum Vitae
 
 Here you can preview or download my CV:
 
