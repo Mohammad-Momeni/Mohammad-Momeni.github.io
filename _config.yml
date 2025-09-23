@@ -8,33 +8,33 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Sadra Berangi"
+title                    : "Mohammad Matin Momeni"
 title_separator          : "-"
-name                     : &name "Sadra Berangi"
+name                     : &name "Mohammad Matin Momeni"
 description              : &description "personal description"
-url                      : https://sadraberangi.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://Mohammad-Momeni.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "sadraberangi/sadraberangi.github.io"
+repository               : "Mohammad-Momeni/Mohammad-Momeni.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Sadra Berangi"
+  avatar           : "profile.jpg"
+  name             : "Mohammad Matin Momeni"
   pronouns         : # example: "she/her"  
-  bio              : "Student @ National University of Iran"
-  location         : "Iran"
-  employer         : "Shahid Beheshti University"
+  bio              : "Undergraduate Student @ Shahid Beheshti university"
+  location         : "Tehran, Iran"
+  # employer         : "Shahid Beheshti University"
   uri              : # URL
-  email            : "sadraberangi@gmail.com" 
+  email            : "mohammad.matin.momenir@gmail.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=P3slw18AAAAJ"
+  # googlescholar    : ""
   impactstory      : # URL
-  orcid            : "http://orcid.org/0009-0000-1461-3770"
+  # orcid            : ""
   semantic         : # URL
   pubmed           : #"https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
@@ -43,7 +43,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "sadraberangi"
+  github           : "Mohammad-Momeni"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -57,7 +57,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : sadra-berangi
+  linkedin         : mohammad-matin-momeni-990681253
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
