@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Homepage"
+title: "About"
 author_profile: true
 redirect_from: 
   - /about/
@@ -9,18 +9,43 @@ redirect_from:
 
 ## About Me
 
-I am **Sadra Berangi**, an undergraduate student in **Computer Science and Engineering** at **Shahid Beheshti University**. My academic and research journey revolves around **artificial intelligence** and its broad applications, with experience in areas such as **machine learning, reinforcement learning, computer vision, robotics and medical AI**.  
+I'm **Mohammad Matin Momeni Ravandi**, and I'm currently finishing my **B.Sc.** in **Computer Engineering** at **Shahid Beheshti University**.
+I’m deeply fascinated by **robotics** — the mix of hardware and intelligence that brings machines to life.
+**Machine learning** excites me because of its ability to uncover patterns and push the boundaries of what’s possible.
 
-I have co-authored multiple research papers in international journals and conferences, covering topics from **interpretable deep learning** to **reinforcement learning** and **medical AI**. Beyond research, I have also gained hands-on experience as a **junior ML and vision engineer**, where I contributed to real-world projects involving **autonomous systems and intelligent decision-making**.  
-
-I enjoy exploring how AI can address both **theoretical challenges** and **practical problems**, and I am eager to expand my expertise further through advanced studies and collaborations.  
-
-Feel free to connect with me via [email](mailto:sadraberangi@gmail.com).  
+When I’m not in front of my code editor, you’ll probably find me lost in a good film or bingeing a great TV series — I love engaging stories that make me think.
+And when it comes to gaming, I’m all about the challenge: few things are as rewarding as finally taking down a boss in the "Soulsborne" series after hours of struggle (and maybe a few too many failed attempts).
 
 ---
 
 ## Education
 
-**Bachelor of Science in Computer Science and Engineering**  
-Shahid Beheshti University (National University of Iran)  
-2021 – Present  
+<div class="edu-card">
+  <div class="edu-card__title">
+    <strong>B.Sc. in Computer Engineering</strong> — Shahid Beheshti University, Tehran, Iran
+  </div>
+  <div class="edu-card__meta">Expected Jan 2026</div>
+
+  <ul class="edu-stats">
+    <li class="stat"><span class="stat__label">Cumulative</span><span class="stat__value">18.10/20 (3.81/4)</span></li>
+    <li class="stat"><span class="stat__label">Last two years</span><span class="stat__value">19.08/20 (4/4)</span></li>
+  </ul>
+
+  <div class="course-chips">
+    <span class="chip">Fundamentals of Robotics</span>
+    <span class="chip">Deep Reinforcement Learning</span>
+    <span class="chip">Machine Learning</span>
+    <span class="chip">Computer Vision</span>
+    <span class="chip">Artificial Intelligence</span>
+    <span class="chip">Foundations of Cryptocurrencies</span>
+    <span class="chip">Signals & Systems</span>
+    <span class="chip">Algorithms</span>
+  </div>
+</div>
+
+## Languages
+<div class="lang-chips">
+  <span class="chip">Persian — Native</span>
+  <span class="chip">English — IELTS 8</span>
+  <span class="chip">German — CEFR A1</span>
+</div>
