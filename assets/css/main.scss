@@ -39,3 +39,40 @@
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+
+/* === About: Education + Languages polish === */
+:root{
+  --chip-bg:#eef6ff; --chip-b:#d9e8fb; --chip-text:#0f4573;
+}
+
+.edu-card{
+  padding:1rem 1.25rem;
+  border:1px solid #e6edf5;
+  background:#f9fbfe;
+  border-radius:12px;
+  box-shadow:0 6px 12px rgba(0,0,0,.04);
+}
+.edu-card__title{ margin:0; color:#143a52; }
+.edu-card__meta{ color:#5b6b7a; margin:.15rem 0 .5rem; }
+
+.edu-stats{
+  display:flex; flex-wrap:wrap; gap:.5rem; padding:0; margin:0 0 .5rem 0; list-style:none;
+}
+.stat{
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.22rem .55rem; font-size:.85rem; border-radius:999px;
+  background:#f3f7fc; border:1px solid #e2ebf7; color:#2a4a68;
+}
+.stat__label{ opacity:.8; }
+.stat__value{ font-weight:700; }
+
+.course-chips, .lang-chips{
+  display:flex; flex-wrap:wrap; gap:.45rem; margin-top:.25rem;
+}
+.chip{
+  display:inline-flex; align-items:center; padding:.24rem .55rem;
+  background:var(--chip-bg); border:1px solid var(--chip-b);
+  color:var(--chip-text); border-radius:999px; font-size:.85rem; font-weight:600;
+  white-space:nowrap;
+}
