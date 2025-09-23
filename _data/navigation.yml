@@ -5,7 +5,7 @@
 # prevent it from being included in the site.
 
 main:
-  - title: "Home Page"
+  - title: "About"
     url: /about/
 
   # - title: "Publications"
