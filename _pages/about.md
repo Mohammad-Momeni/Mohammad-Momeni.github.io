@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I'm **Mohammad Matin Momeni Ravandi**, and I'm currently finishing my **B.Sc.** in **Computer Engineering** at **Shahid Beheshti University**.
+I'm **Mohammad Matin Momeni Ravandi**, and I graduated with a **B.Sc.** in **Computer Engineering** from **Shahid Beheshti University**.
 I’m deeply fascinated by **robotics** — the mix of hardware and intelligence that brings machines to life.
 **Machine learning** excites me because of its ability to uncover patterns and push the boundaries of what’s possible.
 
@@ -26,21 +26,21 @@ You can reach me via:
   <div class="edu-card__title">
     <strong>B.Sc. in Computer Engineering</strong> — Shahid Beheshti University, Tehran, Iran
   </div>
-  <div class="edu-card__meta">Expected Jan 2026</div>
+  <div class="edu-card__meta">Feb 2026</div>
 
   <ul class="edu-stats">
-    <li class="stat"><span class="stat__label">Cumulative</span><span class="stat__value">18.20/20 (3.8/4)</span></li>
-    <li class="stat"><span class="stat__label">Last two years</span><span class="stat__value">18.57/20 (3.84/4)</span></li>
+    <li class="stat"><span class="stat__label">Cumulative</span><span class="stat__value">18.22/20 (3.81/4)</span></li>
+    <li class="stat"><span class="stat__label">Last two years</span><span class="stat__value">18.54/20 (3.87/4)</span></li>
   </ul>
 
   <div class="course-chips">
     <span class="chip">Fundamentals of Robotics</span>
+    <span class="chip">Computer Vision</span>
     <span class="chip">Deep Reinforcement Learning</span>
     <span class="chip">Machine Learning</span>
-    <span class="chip">Computer Vision</span>
     <span class="chip">Artificial Intelligence</span>
-    <span class="chip">Foundations of Cryptocurrencies</span>
-    <span class="chip">Signals & Systems</span>
+    <span class="chip">Fundamentals of Cybersecurity</span>
+    <span class="chip">Computer Networks</span>
   </div>
 </div>
 
