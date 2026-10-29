@@ -1,71 +1,17 @@
 ---
-layout: archive
-title: "Curriculum Vitae"
+layout: profile
+title: "Curriculum vitae"
 permalink: /cv/
-author_profile: true
+author_profile: false
+description: "Education, research, teaching, and engineering experience of Mohammad Matin Momeni Ravandi. View or download the full CV."
 redirect_from:
   - /resume
 ---
-
-{% include base_path %}
-
-<!-- Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
-
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams -->
-
-Here you can preview or download my CV:
-
-[📄 Download CV (PDF)]({{ site.baseurl }}/files/cv.pdf)
-
-<iframe src="{{ site.baseurl }}/files/cv.pdf#toolbar=0" width="100%" height="600px" style="border:1px solid #ccc;">
-</iframe>
+<section class="cv-page section-shell"><p class="eyebrow">Background &amp; experience</p><div class="section-heading"><h1>Curriculum <em>vitae.</em></h1><a class="button button-dark" href="{{ '/files/cv.pdf' | relative_url }}" download>Download PDF <span aria-hidden="true">↓</span></a></div><p class="cv-intro">Mohammad Matin Momeni Ravandi<br>Computer Engineering · Robotics · Data systems</p><div class="cv-facts"><article><p class="eyebrow">Education</p><h2>Shahid Beheshti University</h2><p>B.Sc. Computer Engineering, 2021–2026<br>GPA 18.22/20 · Final two years 18.54/20</p></article><article><p class="eyebrow">Work</p><h2>Web Data Extraction Engineer</h2><p>EXA · November 2025–present<br>Data pipelines, services, and media processing</p></article><article><p class="eyebrow">Research</p><h2>Robotics, perception &amp; privacy</h2><p>Quadrotor control, computer vision datasets, and browser fingerprinting research.</p></article></div>
+<div class="cv-details">
+<section aria-labelledby="cv-research"><h2 id="cv-research">Research</h2><article><h3>Browser fingerprinting · B.Sc. thesis</h3><p class="organization">Shahid Beheshti University · Dr. M. Hosseini</p><p>Studying browser and user fingerprinting, collecting and labeling scripts from a crawl targeting the top 10,000 websites, and evaluating detection methods.</p></article><article><h3>Robotics Research Assistant</h3><p class="organization">January 2024–June 2025 · Shahid Beheshti University · Dr. A. Salimi-Badr</p><p>Cooperative load transportation with two quadrotors; Mavic 2 Pro control; TurtleBot Burger and Waffle assembly with ROS and Gazebo.</p></article><article><h3>Computer Vision Research Assistant</h3><p class="organization">December 2024–April 2025 · Shahid Beheshti University · Dr. S. Nabavi</p><p>Dataset construction and bounding-box annotation for rock–paper–scissors gesture recognition, followed by detector training.</p></article></section>
+<section aria-labelledby="cv-teaching"><h2 id="cv-teaching">Teaching</h2><article><h3>Teaching Assistant &amp; Head TA</h3><p class="organization">Since September 2022 · Shahid Beheshti University</p><p>Head TA for Principles of Robotics and Formal Languages &amp; Automata Theory. Teaching assistant for Artificial Intelligence &amp; Expert Systems, Signals &amp; Systems, Principles of Compiler Design, Advanced Programming, and Fundamentals of Computer &amp; Programming.</p><p>Assignment and project design, grading, tutorials, student mentoring, and teaching materials.</p></article></section>
+<section aria-labelledby="cv-publication"><h2 id="cv-publication">Publication</h2><article><h3>Development of a Decision Tree-Based Artificial Intelligence Model for Enhancing Acute Appendicitis Diagnosis in Pediatric Patients</h3><p class="organization">2nd International Congress on Artificial Intelligence in Medical Sciences · 2025</p><p>A. Ghattan, M. M. Momeni, A. Bozorgnia, H. Ebrahimpour, and M. Shabani.</p></article></section>
+<section aria-labelledby="cv-tools"><h2 id="cv-tools">Tools &amp; methods</h2><div class="cv-tool-grid"><article><h3>Robotics &amp; simulation</h3><p>Webots, ROS, Gazebo; control, mapping, and reinforcement learning.</p></article><article><h3>Data &amp; services</h3><p>Python, Kafka, RabbitMQ, PostgreSQL, Pydantic, REST APIs, Scrapy, Selenium.</p></article><article><h3>Perception &amp; computing</h3><p>OpenCV, PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, MATLAB.</p></article><article><h3>Software &amp; systems</h3><p>Python, Java, C/C++, C#, Linux, Git, Docker.</p></article></div></section>
+<section aria-labelledby="cv-honors"><h2 id="cv-honors">Honors &amp; languages</h2><article><p>Ranked in the top 10 of 110 students at Shahid Beheshti University (September 2025). Ranked in the top 0.5% of 127,000 participants in the national university entrance exam (2021).</p><p>Persian, native · English, IELTS 8.0 · German, CEFR A2</p></article></section>
+</div><div class="cv-bottom"><p>Project details and a more personal introduction are on the homepage.</p><a class="text-link" href="{{ '/' | relative_url }}#work">Explore selected work ↗</a><a class="text-link" href="{{ '/files/cv.pdf' | relative_url }}">View the original PDF ↗</a></div></section>

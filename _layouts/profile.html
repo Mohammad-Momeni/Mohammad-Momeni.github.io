@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141a17">
+  <title>{{ page.title }} · Mohammad Matin Momeni</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title }} · Mohammad Matin Momeni">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/images/social-profile.jpg' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/monogram.svg' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/desktop.css?v=worlds-4' | relative_url }}">
+  <script src="{{ '/assets/js/profile.js?v=worlds-4' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/off-duty.js?v=worlds-4' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/desktop.js?v=worlds-4' | relative_url }}" defer></script>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" class="icon-definitions" aria-hidden="true"><defs><symbol id="icon-robot" viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="12" rx="3"/><path d="M12 3v4M2 11v5m20-5v5M8 22v-3m8 3v-3M8 11h1m6 0h1M9 15h6"/><circle cx="12" cy="2" r="1"/></symbol><symbol id="icon-scan" viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M2 12h20"/><circle cx="12" cy="12" r="5"/></symbol><symbol id="icon-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/></symbol><symbol id="icon-fingerprint" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0116 0v4M7 20v-8a5 5 0 0110 0v8M10 22V12a2 2 0 014 0v10M4 16v4"/></symbol><symbol id="icon-code" viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6m8-12l6 6-6 6M14 3l-4 18"/></symbol><symbol id="icon-network" viewBox="0 0 24 24"><circle cx="12" cy="4" r="3"/><circle cx="4" cy="20" r="3"/><circle cx="20" cy="20" r="3"/><path d="M12 7v5M4 17v-5h16v5"/></symbol><symbol id="icon-signal" viewBox="0 0 24 24"><path d="M2 12h4l3-8 6 16 3-8h4"/></symbol><symbol id="icon-orbit" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><ellipse cx="12" cy="12" rx="11" ry="5" transform="rotate(-35 12 12)"/><path d="M8 2c-6 6 2 21 8 20"/></symbol><symbol id="icon-game" viewBox="0 0 24 24"><path d="M7 7h10c5 0 7 13 3 13l-5-4H9l-5 4C0 20 2 7 7 7zM7 10v5m-2-2h4m7-2h1m1 3h1"/></symbol><symbol id="icon-film" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 4v16M17 4v16M2 9h5m-5 6h5m10-6h5m-5 6h5"/></symbol><symbol id="icon-mail" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 6l10 7L22 6"/></symbol><symbol id="icon-github" viewBox="0 0 24 24"><path d="M8 21v-4c-4 1-4-2-6-2m14 6v-4c0-1-1-2-1-2 5-1 7-8 3-10V2l-5 2h-2L6 2v3c-4 3-2 9 3 10-1 1-1 2-1 2"/></symbol></defs></svg>
+<div class="technical-atmosphere" aria-hidden="true"><div class="circuit-field"></div><div class="radar-field"></div><div class="ambient-orbit"></div></div><div class="reading-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="identity" href="{{ '/' | relative_url }}" aria-label="Mohammad Matin Momeni, home"><span class="monogram" aria-hidden="true">m<span>.</span></span><span>Mohammad Matin Momeni<span class="identity-note">Robotics &amp; data systems</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu <span aria-hidden="true">+</span></button>
+    <nav id="main-nav" aria-label="Main navigation">
+      <a href="{{ '/' | relative_url }}#work">Selected work</a>
+      <a href="{{ '/' | relative_url }}#experience">Experience</a>
+      <a href="{{ '/' | relative_url }}#about">About</a>
+      <a href="{{ '/' | relative_url }}#off-duty">Off duty</a>
+      <a class="nav-cv" href="{{ '/cv/' | relative_url }}">CV <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">{{ content }}</main>
+  <footer class="site-footer"><a href="{{ '/' | relative_url }}">Mohammad Matin Momeni</a><span>Built with curiosity. Based in Tehran.</span><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
+</body>
+</html>

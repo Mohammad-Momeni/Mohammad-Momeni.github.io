@@ -1,52 +1,101 @@
 ---
+layout: profile
 permalink: /
-title: "About"
-author_profile: true
-redirect_from: 
+title: "Robotics & data systems"
+description: "Mohammad Matin Momeni Ravandi — computer engineer working across robotics, control, and reliable data systems. Explore projects, research, and experience."
+author_profile: false
+redirect_from:
   - /about/
   - /about.html
 ---
 
-I'm **Mohammad Matin Momeni Ravandi**, and I graduated with a **B.Sc.** in **Computer Engineering** from **Shahid Beheshti University**.
-I’m deeply fascinated by **robotics** — the mix of hardware and intelligence that brings machines to life.
-**Machine learning** excites me because of its ability to uncover patterns and push the boundaries of what’s possible.
-
-When I’m not in front of my code editor, you’ll probably find me lost in a good film or bingeing a great TV series — I love engaging stories that make me think.
-And when it comes to gaming, I’m all about the challenge: few things are as rewarding as finally taking down a boss in the "Soulsborne" series after hours of struggle (and maybe a few too many failed attempts).
-
-You can reach me via:
-- [Email](mailto:mohammad.matin.momenir@gmail.com)
-- [Telegram](https://t.me/MohammadM404)
-
----
-
-## Education
-
-<div class="edu-card">
-  <div class="edu-card__title">
-    <strong>B.Sc. in Computer Engineering</strong> — Shahid Beheshti University, Tehran, Iran
+<section class="hero section-shell" aria-labelledby="intro-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="small-cross" aria-hidden="true">+</span> Matin’s corner of the internet / Tehran</p>
+    <h1 id="intro-title">A curious mind.<br>A builder’s hands.<br><em>A few more tries.</em></h1>
+    <p class="hero-intro">I’m Matin. Engineer, robotics enthusiast, film lover, and a firm believer in trying one more time.</p>
+    <p class="hero-detail">I build robots and data systems. I also get far too invested in a good story—or a boss fight. Welcome to the space where those sides of me meet.</p>
+    <div class="hero-actions"><a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="mailto:mohammad.matin.momenir@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></div>
+    <div class="hero-caption"><span class="status-dot" aria-hidden="true"></span> Robotics · Control · Data engineering</div>
   </div>
-  <div class="edu-card__meta">Feb 2026</div>
-
-  <ul class="edu-stats">
-    <li class="stat"><span class="stat__label">Cumulative</span><span class="stat__value">18.22/20 (3.81/4)</span></li>
-    <li class="stat"><span class="stat__label">Last two years</span><span class="stat__value">18.54/20 (3.87/4)</span></li>
-  </ul>
-
-  <div class="course-chips">
-    <span class="chip">Fundamentals of Robotics</span>
-    <span class="chip">Computer Vision</span>
-    <span class="chip">Deep Reinforcement Learning</span>
-    <span class="chip">Machine Learning</span>
-    <span class="chip">Artificial Intelligence</span>
-    <span class="chip">Fundamentals of Cybersecurity</span>
-    <span class="chip">Computer Networks</span>
+  <div class="hero-visual">
+    <figure class="rover-console">
+      <div class="console-top"><span><i></i> MATIN / FIELD STATION</span><span>EXPERIMENT 001</span></div>
+      <div class="rover-stage"><canvas id="rover-map" width="700" height="560" aria-label="Interactive illustrated rover map. Click a point to send the rover there, or use the destination buttons below.">An illustrated rover exploring a terrain map.</canvas><div class="map-caption"><span>UNKNOWN TERRAIN.<br>FAMILIAR CURIOSITY.</span><span class="map-compass" aria-hidden="true">N<br>↑</span></div></div>
+      <div class="console-readout"><span id="rover-status" role="status" aria-live="polite">Pick a destination. See where it goes.</span><button type="button" id="rover-pause" aria-pressed="false">Pause motion</button></div>
+      <label class="rover-tuning">Controller response <input id="rover-response" type="range" min="0.5" max="1.8" step="0.1" value="1" aria-label="Rover controller response"><output id="rover-response-value" for="rover-response">1.0×</output></label>
+      <div class="rover-destinations" role="group" aria-label="Rover destinations"><button type="button" data-rover="lab">01 / The workshop</button><button type="button" data-rover="camp">02 / Off duty</button><button type="button" data-rover="uplink">03 / Say hello</button></div>
+      <a id="rover-destination" href="#work">Enter the workshop <span aria-hidden="true">↗</span></a>
+      <figcaption>Tap the terrain to explore · A small control playground</figcaption>
+    </figure>
+    <div class="hero-person"><img src="{{ '/assets/images/portrait.webp' | relative_url }}" alt="Mohammad Matin Momeni Ravandi" width="64" height="64"><p>Mohammad Matin<br><strong>Momeni Ravandi</strong></p><span class="person-note">Build. Get stuck.<br>Figure it out. Repeat.</span></div>
   </div>
-</div>
+</section>
 
-## Languages
-<div class="lang-chips">
-  <span class="chip">Persian — Native</span>
-  <span class="chip">English — IELTS 8</span>
-  <span class="chip">German — CEFR A1</span>
-</div>
+<div class="focus-strip section-shell" aria-label="Areas of interest"><span class="eyebrow">At the intersection of</span><span><svg class="work-icon" aria-hidden="true"><use href="#icon-robot"/></svg>Robotics &amp; control</span><span><svg class="work-icon" aria-hidden="true"><use href="#icon-scan"/></svg>Perception</span><span><svg class="work-icon" aria-hidden="true"><use href="#icon-network"/></svg>Distributed data systems</span><span><svg class="work-icon" aria-hidden="true"><use href="#icon-fingerprint"/></svg>Privacy research</span></div>
+
+<section class="signal-lab section-shell" aria-labelledby="signal-lab-title"><div class="lab-heading"><div><p class="eyebrow">An interactive sketchbook / three sides of my work</p><h2 id="signal-lab-title">Follow the <em>signal.</em></h2></div><div class="lab-modes" role="group" aria-label="Explore engineering themes"><button type="button" data-lab="robot" aria-pressed="true"><svg class="work-icon" aria-hidden="true"><use href="#icon-robot"/></svg>Robot perception</button><button type="button" data-lab="data" aria-pressed="false"><svg class="work-icon" aria-hidden="true"><use href="#icon-network"/></svg>Data pipelines</button><button type="button" data-lab="privacy" aria-pressed="false"><svg class="work-icon" aria-hidden="true"><use href="#icon-fingerprint"/></svg>Web privacy</button></div></div><div class="lab-surface"><svg id="signal-diagram" viewBox="0 0 1000 270" aria-hidden="true"><defs><pattern id="lab-grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" stroke="#82bd6517" fill="none"/></pattern></defs><rect width="1000" height="270" fill="url(#lab-grid)"/><g class="signal-links" fill="none" stroke="#69d790"><path d="M180 135H480M520 135H820"/><path class="signal-return" d="M820 160V230H180V160"/></g><g class="signal-packets"><circle r="5"><animateMotion dur="3s" repeatCount="indefinite" path="M180 135H820"/></circle><circle r="3"><animateMotion dur="3s" begin="-1.5s" repeatCount="indefinite" path="M180 135H820"/></circle></g><g class="lab-nodes" fill="#182d22" stroke="#77c48e"><circle cx="180" cy="135" r="49"/><circle cx="500" cy="135" r="49"/><circle cx="820" cy="135" r="49"/></g><g class="lab-symbols" fill="none" stroke="#a9e9ae" stroke-width="1.5"><use href="#icon-scan" x="160" y="115" width="40" height="40"/><use href="#icon-code" x="480" y="115" width="40" height="40"/><use href="#icon-robot" x="800" y="115" width="40" height="40"/></g><g class="lab-labels" text-anchor="middle" fill="#bfe5c0" font-size="13" font-family="monospace"><text x="180" y="60">SENSE</text><text x="500" y="60">INTERPRET</text><text x="820" y="60">ACT</text></g></svg><div class="lab-controls"><button type="button" data-stage="0" aria-pressed="true">01 / Input</button><button type="button" data-stage="1" aria-pressed="false">02 / Process</button><button type="button" data-stage="2" aria-pressed="false">03 / Output</button></div></div><div class="lab-explainer" aria-live="polite"><span id="lab-step">01 / SENSE</span><p id="lab-description">A robot starts with an imperfect view of the world. Images and sensor readings are the raw material for perception.</p><a id="lab-project" href="#work">Explore the robotics projects ↗</a></div><p class="lab-note">Conceptual illustrations of my work · Choose a theme, then a stage to look inside.</p></section>
+<section id="work" class="work-section section-shell" aria-labelledby="work-title">
+  <div class="section-heading"><div><p class="eyebrow">01 / Selected work</p><h2 id="work-title">Things I’ve<br><em>sent into the world.</em></h2></div><p>A selection of projects in movement,<br>perception, and software systems.</p></div>
+  <div class="project-toolbar"><div class="filters" role="group" aria-label="Filter projects"><button type="button" class="filter active" data-filter="all" aria-pressed="true">All work <span>06</span></button><button type="button" class="filter" data-filter="robotics" aria-pressed="false">Robotics &amp; control</button><button type="button" class="filter" data-filter="perception" aria-pressed="false">Perception</button><button type="button" class="filter" data-filter="systems" aria-pressed="false">Systems</button></div><p id="project-count" class="project-count" role="status" aria-live="polite">6 projects</p></div>
+  <div class="project-grid">
+    <article class="project project-featured" data-category="robotics perception"><span class="project-emblem"><svg class="work-icon" aria-hidden="true"><use href="#icon-orbit"/></svg></span>
+      <a class="project-image quad-visual" href="https://github.com/Mohammad-Momeni/Quadcopter-Controller-With-CNN" aria-label="View Quadcopter perception and control on GitHub">
+        <svg viewBox="0 0 640 355" role="img" aria-label="Schematic quadrotor illustration"><defs><pattern id="quad-grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#b9d4c9" stroke-opacity=".12"/></pattern></defs><rect width="640" height="355" fill="url(#quad-grid)"/><g transform="translate(320 175)" stroke="#b6d4c2" fill="none"><ellipse rx="174" ry="98" stroke-dasharray="4 7" opacity=".4"/><path d="M-190 0H190M0 -132V132" opacity=".25"/><g transform="rotate(-22)"><path d="M-88 -55L88 55M88 -55L-88 55" stroke-width="12" stroke="#527b69"/><rect x="-34" y="-34" width="68" height="68" rx="14" fill="#234e3d" stroke-width="2"/><g stroke-width="2"><ellipse cx="-92" cy="-58" rx="54" ry="32"/><ellipse cx="92" cy="58" rx="54" ry="32"/><ellipse cx="92" cy="-58" rx="54" ry="32"/><ellipse cx="-92" cy="58" rx="54" ry="32"/></g><path d="M-125 -58H-59M59 58H125M59 -58H125M-125 58H-59" stroke-width="3"/><circle r="9" fill="#d6e7cc"/></g><path d="M105 91L150 114H231"/><path d="M-115 -95L-167 -122H-238"/></g><g fill="#b6d4c2" font-family="monospace" font-size="10"><text x="474" y="302">PERCEPTION → CONTROL</text><text x="23" y="34">MAVIC 2 PRO / WEBOTS</text><text x="84" y="47">CNN VISION MODULE</text></g></svg>
+        <span class="image-index">01 / ROBOTICS</span><span class="image-arrow" aria-hidden="true">↗</span>
+      </a>
+      <div class="project-body"><p class="project-kind">Robotics · Computer vision</p><h3><a href="https://github.com/Mohammad-Momeni/Quadcopter-Controller-With-CNN">Quadcopter perception &amp; control <span aria-hidden="true">↗</span></a></h3><p>A Mavic 2 Pro controller in Webots, paired with a CNN vision module for detecting objects in the simulation environment.</p><ul class="tags" aria-label="Technologies"><li>Webots</li><li>Python</li><li>CNNs</li></ul></div>
+    </article>
+    <article class="project" data-category="robotics"><span class="project-emblem"><svg class="work-icon" aria-hidden="true"><use href="#icon-robot"/></svg></span>
+      <a class="project-image lander-visual" href="https://github.com/Mohammad-Momeni/Solving-LunarLander-Using-RL" aria-label="View LunarLander control experiments on GitHub"><img src="{{ '/assets/images/lunar-lander.webp' | relative_url }}" alt="A frame from my LunarLander agent demonstration" width="744" height="494" loading="lazy"><span class="image-index">02 / CONTROL</span><span class="image-arrow" aria-hidden="true">↗</span></a>
+      <div class="project-body"><p class="project-kind">Control · Reinforcement learning</p><h3><a href="https://github.com/Mohammad-Momeni/Solving-LunarLander-Using-RL">Learning to land <span aria-hidden="true">↗</span></a></h3><p>Exploring DQN and Dueling Double DQN for LunarLander, including experiments with an adaptive discount factor.</p><ul class="tags" aria-label="Technologies"><li>PyTorch</li><li>Gymnasium</li><li>D3QN</li></ul></div>
+    </article>
+    <article class="project" data-category="robotics"><span class="project-emblem"><svg class="work-icon" aria-hidden="true"><use href="#icon-robot"/></svg></span>
+      <a class="project-image mapping-visual" href="{{ '/projects/split-merge-mapping/' | relative_url }}" aria-label="Read the split-and-merge mapping case study"><img src="{{ '/assets/images/mapping.webp' | relative_url }}" alt="Output from my split-and-merge mapping project" width="600" height="400" loading="lazy"><span class="image-index">03 / ROBOTICS</span><span class="image-arrow" aria-hidden="true">↗</span></a>
+      <div class="project-body"><p class="project-kind">Robotics · Geometry</p><h3><a href="{{ '/projects/split-merge-mapping/' | relative_url }}">From sensor readings to maps <span aria-hidden="true">↗</span></a></h3><p>Turning distance-sensor observations into line-based maps using split-and-merge geometry in a Webots environment.</p><ul class="tags" aria-label="Technologies"><li>Webots</li><li>NumPy</li><li>Mapping</li></ul></div>
+    </article>
+    <article class="project" data-category="perception"><span class="project-emblem"><svg class="work-icon" aria-hidden="true"><use href="#icon-scan"/></svg></span>
+      <a class="project-image gesture-visual" href="https://github.com/Mohammad-Momeni/Rock-Paper-Scissors-Game" aria-label="View Rock paper scissors referee on GitHub"><span class="gesture-symbols" aria-hidden="true">✊ <span>✋</span> ✌</span><span class="detection-box" aria-hidden="true"><span>GESTURE / DETECTED</span></span><span class="image-index">04 / PERCEPTION</span><span class="image-arrow" aria-hidden="true">↗</span></a>
+      <div class="project-body"><p class="project-kind">Computer vision · Interactive systems</p><h3><a href="https://github.com/Mohammad-Momeni/Rock-Paper-Scissors-Game">A referee that watches the hands <span aria-hidden="true">↗</span></a></h3><p>A real-time rock–paper–scissors referee with a custom gesture dataset, YOLOv8 detection, and checks for late gesture changes.</p><ul class="tags" aria-label="Technologies"><li>YOLOv8</li><li>OpenCV</li><li>Dataset design</li></ul></div>
+    </article>
+    <article class="project" data-category="systems"><span class="project-emblem"><svg class="work-icon" aria-hidden="true"><use href="#icon-network"/></svg></span>
+      <a class="project-image pipeline-visual" href="#engineering" aria-label="Read about my data engineering work"><div class="pipeline-mini" aria-hidden="true"><span>DISCOVER</span><i>→</i><span>PROCESS</span><i>→</i><span>DELIVER</span></div><div class="pipeline-line" aria-hidden="true"></div><span class="image-index">05 / ENGINEERING</span><span class="image-arrow" aria-hidden="true">↗</span></a>
+      <div class="project-body"><p class="project-kind">Professional work · Data engineering</p><h3><a href="#engineering">Reliable data, end to end <span aria-hidden="true">↗</span></a></h3><p>Crawling, parsing, media processing, and delivery workflows. Engineering the handoffs between services, from message queues to structured storage.</p><ul class="tags" aria-label="Technologies"><li>Kafka</li><li>RabbitMQ</li><li>PostgreSQL</li></ul></div>
+    </article>
+    <article class="project" data-category="systems"><span class="project-emblem"><svg class="work-icon" aria-hidden="true"><use href="#icon-network"/></svg></span>
+      <a class="project-image privacy-visual" href="#fingerprinting" aria-label="Read about my browser fingerprinting thesis"><svg viewBox="0 0 400 270" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><path d="M140 210V136a60 60 0 01120 0v50M152 222v-86a48 48 0 0196 0v65M164 235v-99a36 36 0 0172 0v80M176 230v-94a24 24 0 0148 0v95M188 215v-79a12 12 0 0124 0v100M200 140v100M128 185v-49a72 72 0 01144 0v30M116 166v-30a84 84 0 01168 0v15"/></g></svg><span class="image-index">06 / PRIVACY</span><span class="image-arrow" aria-hidden="true">↗</span></a>
+      <div class="project-body"><p class="project-kind">B.Sc. thesis · Privacy research</p><h3><a href="#fingerprinting">Understanding browser fingerprints <span aria-hidden="true">↗</span></a></h3><p>Studying browser fingerprinting through script collection, dataset construction, and evaluation of detection methods.</p><ul class="tags" aria-label="Topics"><li>Web privacy</li><li>Data collection</li><li>Research</li></ul></div>
+    </article>
+  </div>
+  <a class="text-link all-repos" href="https://github.com/Mohammad-Momeni">More experiments on GitHub <span aria-hidden="true">↗</span></a>
+</section>
+
+<section id="engineering" class="engineering-section" aria-labelledby="engineering-title"><div class="section-shell engineering-inner"><div class="engineering-intro"><p class="eyebrow">Behind the systems</p><h2 id="engineering-title">The handoffs<br>matter <em>too.</em></h2><p>A working pipeline is more than a successful request. I’m interested in what happens between discovery and delivery: how services share data, recover from failures, and stay understandable as they grow.</p><span class="engineering-role">Web Data Extraction Engineer · EXA</span></div><div class="engineering-details"><article><span>01</span><div><h3><svg class="work-icon" aria-hidden="true"><use href="#icon-network"/></svg>Collection &amp; orchestration</h3><p>Building crawlers and scheduling workflows that turn incoming tasks into structured, actionable data.</p></div></article><article><span>02</span><div><h3><svg class="work-icon" aria-hidden="true"><use href="#icon-code"/></svg>Services &amp; contracts</h3><p>Separating extraction, parsing, and database writing; defining versioned data models for downstream consumers.</p></div></article><article><span>03</span><div><h3><svg class="work-icon" aria-hidden="true"><use href="#icon-data"/></svg>Delivery &amp; reliability</h3><p>Working with message queues, retry and failure handling, streaming media downloads, and storage interfaces.</p></div></article><ul class="engineering-stack" aria-label="Engineering tools"><li>Python</li><li>Kafka</li><li>RabbitMQ</li><li>PostgreSQL</li><li>Pydantic</li><li>Docker</li></ul></div></div></section>
+
+<section id="experience" class="experience-section section-shell" aria-labelledby="experience-title"><div class="section-heading"><div><p class="eyebrow">02 / Experience &amp; research</p><h2 id="experience-title">A practice of<br><em>building &amp; learning.</em></h2></div><a class="text-link" href="{{ '/cv/' | relative_url }}">View full CV <span aria-hidden="true">↗</span></a></div>
+  <div class="timeline">
+    <article class="timeline-row"><div class="timeline-date">2025 — present<span>Industry</span></div><div><h3><svg class="work-icon" aria-hidden="true"><use href="#icon-data"/></svg>Web Data Extraction Engineer</h3><p class="organization">EXA · Tehran</p><p>Building extraction, processing, delivery, and versioning workflows, with data and media pipelines using Kafka, RabbitMQ, and PostgreSQL.</p></div></article>
+    <article class="timeline-row" id="fingerprinting"><div class="timeline-date">B.Sc. thesis<span>Research</span></div><div><h3><svg class="work-icon" aria-hidden="true"><use href="#icon-fingerprint"/></svg>Browser fingerprinting &amp; web privacy</h3><p class="organization">Shahid Beheshti University · Supervised by Dr. M. Hosseini</p><p>Studying fingerprinting techniques and building a labeled script dataset from a collection effort targeting the top 10,000 websites, alongside detection-method evaluation.</p></div></article>
+    <article class="timeline-row"><div class="timeline-date">2024 — 2025<span>Research</span></div><div><h3><svg class="work-icon" aria-hidden="true"><use href="#icon-robot"/></svg>Robotics Research Assistant</h3><p class="organization">Shahid Beheshti University · Dr. A. Salimi-Badr</p><p>Worked on cooperative transportation with two quadrotors, Mavic 2 Pro control, and assembling TurtleBot Burger and Waffle robots with ROS and Gazebo.</p></div></article>
+    <article class="timeline-row"><div class="timeline-date">2024 — 2025<span>Research</span></div><div><h3><svg class="work-icon" aria-hidden="true"><use href="#icon-scan"/></svg>Computer Vision Research Assistant</h3><p class="organization">Shahid Beheshti University · Dr. S. Nabavi</p><p>Created and annotated a rock–paper–scissors image dataset and trained a model for gesture detection.</p></div></article>
+    <article class="timeline-row"><div class="timeline-date">Since 2022<span>Teaching</span></div><div><h3><svg class="work-icon" aria-hidden="true"><use href="#icon-code"/></svg>Teaching Assistant &amp; Head TA</h3><p class="organization">Shahid Beheshti University</p><p>Supported courses spanning robotics, programming, signals, compilers, and automata. Head TA roles in Principles of Robotics and Formal Languages &amp; Automata Theory.</p><details><summary>Courses &amp; responsibilities</summary><p>Principles of Robotics; Artificial Intelligence &amp; Expert Systems; Signals &amp; Systems; Formal Languages &amp; Automata Theory; Principles of Compiler Design; Advanced Programming; Fundamentals of Computer &amp; Programming.</p><p>Designed and graded assignments, ran tutorials, mentored student projects, and prepared teaching materials.</p></details></div></article>
+  </div>
+  <aside class="publication"><div><p class="eyebrow">Also in research / AIMS 2025</p><h3>Decision-tree-based support for pediatric appendicitis diagnosis</h3><p>Co-authored with A. Ghattan, A. Bozorgnia, H. Ebrahimpour, and M. Shabani. Presented at the 2nd International Congress on Artificial Intelligence in Medical Sciences.</p></div><span class="publication-type">Conference contribution<br>2025</span></aside>
+</section>
+
+<section id="about" class="about-section section-shell" aria-labelledby="about-title"><div class="about-photo"><img src="{{ '/assets/images/portrait.webp' | relative_url }}" width="640" height="800" alt="Portrait of Matin" loading="lazy"><span class="photo-caption">MATIN / OUTSIDE THE CODE</span></div><div class="about-copy"><p class="eyebrow">03 / A little about me</p><h2 id="about-title">An engineer.<br>A curious <em>person.</em></h2><p>I’m Mohammad Matin Momeni Ravandi, a Computer Engineering graduate of Shahid Beheshti University. My interest in computers started with games and grew into a curiosity about how things work—and how to build them myself.</p><p>Robotics pulled those interests together: geometry, code, hardware, and the challenge of making a system respond to the world. Alongside that, I’ve found a lot to enjoy in the less visible craft of software: good interfaces, reliable data flows, and careful debugging.</p><p>Beyond the screen, I’m into films, running, music, and games. I have a particular soft spot for Soulsborne games: the exploration, the atmosphere, and the satisfaction of finally getting past a difficult boss.</p><div class="education-note"><span class="eyebrow">Education</span><h3>B.Sc. in Computer Engineering</h3><p>Shahid Beheshti University · 2021–2026</p><div class="education-stats"><span><strong>18.22<small>/20</small></strong>Cumulative GPA</span><span><strong>18.54<small>/20</small></strong>Final two years</span><span><strong>8.0</strong>IELTS</span></div></div><p class="languages">Persian, native · English, proficient · German, A2</p></div></section>
+
+<section id="off-duty" class="off-duty memory-library" aria-labelledby="off-duty-title">
+<div class="memory-heading"><div><p class="eyebrow">Off duty / A personal collection</p><h2 id="off-duty-title">Some worlds<br><em>stay with you.</em></h2></div><p>Stories, games, and a few familiar signals.<br>Look a little closer.</p></div>
+<div class="memory-viewer" data-world="souls"><img id="memory-image" src="{{ '/assets/images/off-duty/souls-official.webp' | relative_url }}" alt="Official Dark Souls Remastered screenshot of an armored character resting at a bonfire" width="1600" height="900"><div class="memory-shade"></div><div class="memory-top"><span id="memory-category">DARK SOULS SERIES</span><span id="memory-index">01 / 05</span></div><div class="memory-caption"><p id="memory-title">Don't you dare go Hollow.</p><span id="memory-credit">Laurentius of the Great Swamp · Dark Souls (2011)</span></div><button class="memory-secret" type="button" aria-label="Inspect this world">+</button></div>
+<div class="memory-selector" role="group" aria-label="Choose a world">
+<button type="button" data-world="souls" aria-pressed="true"><img src="{{ '/assets/images/off-duty/souls-official.webp' | relative_url }}" alt="" width="160" height="90"><span>01<span>Dark Souls</span></span></button>
+<button type="button" data-world="elden" aria-pressed="false"><img src="{{ '/assets/images/off-duty/elden.webp' | relative_url }}" alt="" width="160" height="90"><span>02<span>Elden Ring</span></span></button>
+<button type="button" data-world="lost" aria-pressed="false"><img src="{{ '/assets/images/off-duty/lost.webp' | relative_url }}" alt="" width="160" height="90"><span>03<span>Lost</span></span></button>
+<button type="button" data-world="robot" aria-pressed="false"><img src="{{ '/assets/images/off-duty/robot.webp' | relative_url }}" alt="" width="160" height="90"><span>04<span>Mr. Robot</span></span></button>
+<button type="button" data-world="leftovers" aria-pressed="false"><img src="{{ '/assets/images/off-duty/leftovers.webp' | relative_url }}" alt="" width="160" height="90"><span>05<span>The Leftovers</span></span></button>
+</div><div class="memory-detail"><p id="memory-note">The atmosphere, the exploration, the fight that finally clicks. And a farewell worth keeping.</p><p id="memory-discovery" role="status" aria-live="polite"></p></div>
+<div class="offduty-smallprint"><span>From my collection, with official Dark Souls imagery.</span><button type="button" data-open="terminal">A terminal is another kind of door. ↗</button></div>
+</section>
+
+<section id="contact" class="contact-section section-shell" aria-labelledby="contact-title"><p class="eyebrow">04 / Get in touch</p><div class="contact-main"><h2 id="contact-title">Something worth<br><em>working on?</em></h2><div><p>For research, engineering, or a thoughtful conversation—my inbox is open.</p><a class="contact-email" href="mailto:mohammad.matin.momenir@gmail.com">Say hello <span aria-hidden="true">↗</span></a><button class="copy-email" type="button" data-email="mohammad.matin.momenir@gmail.com">Copy email address <span aria-hidden="true">⧉</span></button><p class="copy-status" aria-live="polite" role="status"></p></div></div><div class="contact-links"><a href="https://github.com/Mohammad-Momeni">GitHub ↗</a><a href="https://www.linkedin.com/in/mohammad-matin-momeni/">LinkedIn ↗</a><a href="https://t.me/MohammadM404">Telegram ↗</a><a href="{{ '/files/cv.pdf' | relative_url }}">Download CV ↗</a></div></section>
