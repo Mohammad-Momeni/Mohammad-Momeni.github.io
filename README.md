@@ -12,7 +12,7 @@ With Python installed:
 python scripts/preview.py
 ```
 
-Open http://127.0.0.1:4173. This lightweight preview renders the profile layout;
+Open http://127.0.0.1:4173. This lightweight preview renders the page layouts;
 it does not emulate Jekyll’s redirect or sitemap plugins.
 
 For a production-equivalent build with Ruby and Bundler:
@@ -28,7 +28,8 @@ bundle exec jekyll serve
 - `_pages/about.md`: homepage content and app sections.
 - `_pages/cv.md`: HTML CV; `files/cv.pdf`: original downloadable CV.
 - `_pages/mapping.md`: split-and-merge mapping case study.
-- `_layouts/profile.html`: shared document, metadata, navigation, and icon symbols.
+- `_layouts/workspace.html`: workspace-only homepage and hidden app content.
+- `_layouts/profile.html`: CV, case study, and supporting-page layout.
 - `assets/css/profile.css`: section layouts and illustrative visuals.
 - `assets/css/desktop.css`: desktop windows, dock, and Off Duty gallery.
 - `assets/css/fonts.css` and `assets/fonts/`: self-hosted fonts and OFL licenses.
@@ -40,7 +41,7 @@ bundle exec jekyll serve
 
 The homepage uses a desktop interface. App windows reuse the page’s underlying
 HTML sections. The terminal accepts predefined commands, with no system execution.
-Without JavaScript, the underlying content remains readable. Animation honors
+The homepage requires JavaScript; a direct CV link is available without it. Animation honors
 reduced-motion preferences. No analytics or contact-form service is configured.
 
 ## Artwork and licenses

@@ -1,5 +1,5 @@
 ---
-layout: profile
+layout: workspace
 permalink: /
 title: "Robotics & data systems"
 description: "Mohammad Matin Momeni Ravandi — computer engineer working across robotics, control, and reliable data systems. Explore projects, research, and experience."
@@ -9,16 +9,7 @@ redirect_from:
   - /about.html
 ---
 
-<section class="hero section-shell" aria-labelledby="intro-title">
-  <div class="hero-copy">
-    <p class="eyebrow"><span class="small-cross" aria-hidden="true">+</span> Matin’s corner of the internet / Tehran</p>
-    <h1 id="intro-title">A curious mind.<br>A builder’s hands.<br><em>A few more tries.</em></h1>
-    <p class="hero-intro">I’m Matin. Engineer, robotics enthusiast, film lover, and a firm believer in trying one more time.</p>
-    <p class="hero-detail">I build robots and data systems. I also get far too invested in a good story—or a boss fight. Welcome to the space where those sides of me meet.</p>
-    <div class="hero-actions"><a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">↓</span></a><a class="text-link" href="mailto:mohammad.matin.momenir@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></div>
-    <div class="hero-caption"><span class="status-dot" aria-hidden="true"></span> Robotics · Control · Data engineering</div>
-  </div>
-  <div class="hero-visual">
+<div class="hero-visual">
     <figure class="rover-console">
       <div class="console-top"><span><i></i> MATIN / FIELD STATION</span><span>EXPERIMENT 001</span></div>
       <div class="rover-stage"><canvas id="rover-map" width="700" height="560" aria-label="Interactive illustrated rover map. Click a point to send the rover there, or use the destination buttons below.">An illustrated rover exploring a terrain map.</canvas><div class="map-caption"><span>UNKNOWN TERRAIN.<br>FAMILIAR CURIOSITY.</span><span class="map-compass" aria-hidden="true">N<br>↑</span></div></div>
@@ -28,11 +19,7 @@ redirect_from:
       <a id="rover-destination" href="#work">Enter the workshop <span aria-hidden="true">↗</span></a>
       <figcaption>Tap the terrain to explore · A small control playground</figcaption>
     </figure>
-    <div class="hero-person"><img src="{{ '/assets/images/portrait.webp' | relative_url }}" alt="Mohammad Matin Momeni Ravandi" width="64" height="64"><p>Mohammad Matin<br><strong>Momeni Ravandi</strong></p><span class="person-note">Build. Get stuck.<br>Figure it out. Repeat.</span></div>
-  </div>
-</section>
-
-<div class="focus-strip section-shell" aria-label="Areas of interest"><span class="eyebrow">At the intersection of</span><span><svg class="work-icon" aria-hidden="true"><use href="#icon-robot"/></svg>Robotics &amp; control</span><span><svg class="work-icon" aria-hidden="true"><use href="#icon-scan"/></svg>Perception</span><span><svg class="work-icon" aria-hidden="true"><use href="#icon-network"/></svg>Distributed data systems</span><span><svg class="work-icon" aria-hidden="true"><use href="#icon-fingerprint"/></svg>Privacy research</span></div>
+</div>
 
 <section class="signal-lab section-shell" aria-labelledby="signal-lab-title"><div class="lab-heading"><div><p class="eyebrow">An interactive sketchbook / three sides of my work</p><h2 id="signal-lab-title">Follow the <em>signal.</em></h2></div><div class="lab-modes" role="group" aria-label="Explore engineering themes"><button type="button" data-lab="robot" aria-pressed="true"><svg class="work-icon" aria-hidden="true"><use href="#icon-robot"/></svg>Robot perception</button><button type="button" data-lab="data" aria-pressed="false"><svg class="work-icon" aria-hidden="true"><use href="#icon-network"/></svg>Data pipelines</button><button type="button" data-lab="privacy" aria-pressed="false"><svg class="work-icon" aria-hidden="true"><use href="#icon-fingerprint"/></svg>Web privacy</button></div></div><div class="lab-surface"><svg id="signal-diagram" viewBox="0 0 1000 270" aria-hidden="true"><defs><pattern id="lab-grid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" stroke="#82bd6517" fill="none"/></pattern></defs><rect width="1000" height="270" fill="url(#lab-grid)"/><g class="signal-links" fill="none" stroke="#69d790"><path d="M180 135H480M520 135H820"/><path class="signal-return" d="M820 160V230H180V160"/></g><g class="signal-packets"><circle r="5"><animateMotion dur="3s" repeatCount="indefinite" path="M180 135H820"/></circle><circle r="3"><animateMotion dur="3s" begin="-1.5s" repeatCount="indefinite" path="M180 135H820"/></circle></g><g class="lab-nodes" fill="#182d22" stroke="#77c48e"><circle cx="180" cy="135" r="49"/><circle cx="500" cy="135" r="49"/><circle cx="820" cy="135" r="49"/></g><g class="lab-symbols" fill="none" stroke="#a9e9ae" stroke-width="1.5"><use href="#icon-scan" x="160" y="115" width="40" height="40"/><use href="#icon-code" x="480" y="115" width="40" height="40"/><use href="#icon-robot" x="800" y="115" width="40" height="40"/></g><g class="lab-labels" text-anchor="middle" fill="#bfe5c0" font-size="13" font-family="monospace"><text x="180" y="60">SENSE</text><text x="500" y="60">INTERPRET</text><text x="820" y="60">ACT</text></g></svg><div class="lab-controls"><button type="button" data-stage="0" aria-pressed="true">01 / Input</button><button type="button" data-stage="1" aria-pressed="false">02 / Process</button><button type="button" data-stage="2" aria-pressed="false">03 / Output</button></div></div><div class="lab-explainer" aria-live="polite"><span id="lab-step">01 / SENSE</span><p id="lab-description">A robot starts with an imperfect view of the world. Images and sensor readings are the raw material for perception.</p><a id="lab-project" href="#work">Explore the robotics projects ↗</a></div><p class="lab-note">Conceptual illustrations of my work · Choose a theme, then a stage to look inside.</p></section>
 <section id="work" class="work-section section-shell" aria-labelledby="work-title">

@@ -17,7 +17,8 @@ def render(name, route):
     title=re.search(r'^title: *"([^"]*)"',front,re.M).group(1)
     match=re.search(r'^description: *"([^"]*)"',front,re.M)
     description=match.group(1) if match else 'Computer engineer working across robotics, control, and reliable data systems.'
-    layout=(ROOT/'_layouts/profile.html').read_text(encoding='utf-8').replace('{{ content }}',body)
+    layout_name=re.search(r'^layout: *([a-z-]+)',front,re.M).group(1)
+    layout=(ROOT/'_layouts'/f'{layout_name}.html').read_text(encoding='utf-8').replace('{{ content }}',body)
     layout=layout.replace('{{ page.title }}',html.escape(title)).replace('{{ page.description | default: site.description | escape }}',html.escape(description))
     layout=layout.replace('{{ page.url | absolute_url }}','https://mohammad-momeni.github.io'+route)
     layout=re.sub(r"{{\s*'([^']*)'\s*\|\s*(relative_url|absolute_url)\s*}}",lambda m: ('https://mohammad-momeni.github.io' if m[2]=='absolute_url' else '')+m[1],layout)
