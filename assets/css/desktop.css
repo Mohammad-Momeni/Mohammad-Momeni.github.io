@@ -21,3 +21,12 @@ body:has(.cv-page),body:has(.case-study),body:has(.not-found){--paper:#191e29;--
 @keyframes terminal-echo{50%{filter:contrast(1.25) hue-rotate(-9deg)}}
 @media(max-width:760px){.memory-heading{padding:20px 18px 15px;align-items:flex-start;flex-direction:column;gap:12px}.memory-heading h2,.desktop-window .memory-heading h2{font-size:34px}.memory-heading>p{font-size:10px}.memory-selector{display:flex;gap:7px;padding:0 16px 16px;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#6f6c5d #18202a}.memory-selector button{width:104px;flex-shrink:0}.memory-selector button>img{height:53px}.memory-selector button>span{padding:7px;font-size:6px;gap:5px}.memory-selector button>span>span{font-size:9px}.memory-viewer{aspect-ratio:4/3}.memory-top{left:18px;right:18px;top:16px;font-size:6px}.memory-caption{left:18px;right:45px;bottom:23px}.memory-caption>p{font-size:26px}.memory-caption>span{font-size:6px;margin-top:10px}.memory-secret{right:14px;bottom:22px;width:25px;height:25px;font-size:17px}.memory-viewer[data-world=lost] .memory-caption>p{font-size:19px;letter-spacing:.04em}.memory-viewer[data-world=robot] .memory-caption>p{font-size:18px}.memory-viewer[data-world=elden] .memory-caption>p{font-size:23px}.memory-detail{padding:18px}.memory-detail>p:first-child{font-size:11px}.offduty-smallprint{padding:14px 18px 20px;flex-wrap:wrap;gap:8px}.terminal-output .egg-souls,.terminal-output .egg-elden{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.terminal-transmission{animation:none}}
+
+/* Avoid full-screen blur compositing on phones; retain the desktop palette. */
+@media(max-width:760px),(pointer:coarse){
+  .desktop-bar,.desktop-dock,.desktop-window{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .desktop-window{background:#202633;box-shadow:0 8px 24px #0005}
+  .desktop-dock{background:#222936}
+  .wallpaper-glow{filter:none}
+  .portfolio-desktop .project-image{will-change:auto}
+}

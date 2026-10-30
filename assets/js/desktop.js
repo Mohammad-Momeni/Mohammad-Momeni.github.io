@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  if (!document.querySelector('.hero')) return;
+  if (!document.querySelector('.hero')) { document.documentElement.classList.remove('workspace-booting'); clearTimeout(window.workspaceBootTimer); return; }
   const $ = s => document.querySelector(s);
   const icon = name => `<svg class="work-icon" aria-hidden="true"><use href="#icon-${name}"/></svg>`;
   const apps = {
@@ -42,7 +42,7 @@
     const content=win.querySelector('.window-content');
     if(id==='welcome'){
       const img=$('.hero-person img').src;
-      content.innerHTML=`<div class="welcome-app"><div class="welcome-topline"><span class="app-kicker">PERSONAL WORKSPACE / 01</span><span class="welcome-status"><i></i> Engineer. Explorer. Human.</span></div><div class="welcome-layout"><div><p class="welcome-greeting">Hello, I’m Matin.</p><p class="welcome-role">COMPUTER ENGINEER / ROBOTICS &amp; DATA SYSTEMS</p><h1>Built on curiosity.<br><em>And a few retries.</em></h1><p class="welcome-bio">Mohammad Matin Momeni Ravandi.<br>I build robots, data pipelines, and things that help me understand how the world works.</p><div class="welcome-actions"><button data-open="projects">Explore my projects <span>↗</span></button><button data-open="profile">Meet the person</button></div></div><div class="welcome-portrait"><img src="${img}" alt="Mohammad Matin Momeni Ravandi"><span>MATIN / OUTSIDE THE EDITOR</span></div></div><div class="welcome-apps">${['robotics','systems','research'].map(key=>`<button data-open="${key}"><span class="app-icon ${apps[key].color}">${icon(apps[key].icon)}</span><strong>${apps[key].name}</strong><span>${{robotics:'Perception → control',systems:'Collection → delivery',research:'Signals → understanding'}[key]}</span><b>↗</b></button>`).join('')}</div><div class="welcome-bottom"><span>Try the terminal. There are a few familiar echoes.</span><button data-open="terminal">${icon('code')} Open terminal</button></div></div>`;
+      content.innerHTML=`<div class="welcome-app"><div class="welcome-topline"><span class="app-kicker">PERSONAL WORKSPACE / 01</span><span class="welcome-status"><i></i> Engineer. Explorer. Human.</span></div><div class="welcome-layout"><div><p class="welcome-greeting">Hello, I’m Matin.</p><p class="welcome-role">COMPUTER ENGINEER / ROBOTICS &amp; DATA SYSTEMS</p><h1>Built on curiosity.<br><em>And a few retries.</em></h1><p class="welcome-bio">Mohammad Matin Momeni Ravandi.<br>I build robots, data pipelines, and things that help me understand how the world works.</p><div class="welcome-actions"><button data-open="projects">Explore my projects <span>↗</span></button><button data-open="profile">Meet the person</button></div></div><div class="welcome-portrait"><img src="${img}" width="160" height="160" decoding="async" fetchpriority="high" alt="Mohammad Matin Momeni Ravandi"><span>MATIN / OUTSIDE THE EDITOR</span></div></div><div class="welcome-apps">${['robotics','systems','research'].map(key=>`<button data-open="${key}"><span class="app-icon ${apps[key].color}">${icon(apps[key].icon)}</span><strong>${apps[key].name}</strong><span>${{robotics:'Perception → control',systems:'Collection → delivery',research:'Signals → understanding'}[key]}</span><b>↗</b></button>`).join('')}</div><div class="welcome-bottom"><span>Try the terminal. There are a few familiar echoes.</span><button data-open="terminal">${icon('code')} Open terminal</button></div></div>`;
     }else if(id==='terminal'){
       content.innerHTML='<div class="terminal-app"><p class="terminal-greeting">hello, friend.</p><p>A small window into my work. Type <strong>help</strong> to explore.</p><div class="terminal-output" role="log" aria-live="polite"></div><form class="terminal-form"><label for="portfolio-command">matin@workspace:~$</label><input id="portfolio-command" name="command" aria-label="Portfolio terminal command" autocomplete="off" spellcheck="false"><button type="submit">↵</button></form></div>';
       const form=content.querySelector('form'),input=content.querySelector('input'),output=content.querySelector('.terminal-output');let history=[],historyIndex=0;
@@ -93,4 +93,6 @@
   const clock=()=>shell.querySelector('.desktop-clock').textContent=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Tehran',hour:'2-digit',minute:'2-digit'}).format(new Date())+' / Tehran';clock();setInterval(clock,60000);
   enable();open('welcome');
   const initial=targetApps[location.hash.slice(1)];if(initial&&initial!=='welcome')open(initial);
+  clearTimeout(window.workspaceBootTimer);
+  document.documentElement.classList.remove('workspace-booting');
 })();

@@ -54,20 +54,21 @@
   const response = document.querySelector('#rover-response');
   response?.addEventListener('input',()=>{document.querySelector('#rover-response-value').textContent=Number(response.value).toFixed(1)+'×';});
   const spots = {lab:{x:540,y:170,label:'THE WORKSHOP',href:'#work',cta:'Enter the workshop'},camp:{x:170,y:400,label:'OFF DUTY',href:'#off-duty',cta:'Meet the person behind the projects'},uplink:{x:540,y:420,label:'UPLINK',href:'#contact',cta:'Start a conversation'}};
-  let robot={x:290,y:295,angle:-.7},goal={x:420,y:260},trail=[],paused=false,last=0,arrived=false,inView=true;
-  if ("IntersectionObserver" in window) new IntersectionObserver(entries => { inView=entries[0].isIntersecting; }).observe(canvas);
+  let robot={x:290,y:295,angle:-.7},goal={x:420,y:260},trail=[],paused=false,last=0,arrived=false,inView=false,raf=0;
+  if ("IntersectionObserver" in window) new IntersectionObserver(entries => { inView=entries[0].isIntersecting;syncMotion(); }).observe(canvas);
   const size={w:700,h:560};
   const select=(point,key)=>{
     goal={x:point.x,y:point.y};arrived=false;
     document.querySelectorAll('[data-rover]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.rover===key)));
     if(key){destination.href=point.href;destination.firstChild.textContent=point.cta+' ';status.textContent='Destination set: '+point.label.toLowerCase()+'.';}
     else status.textContent='New waypoint. Finding a heading.';
-    if(reduced.matches){robot.x=goal.x;robot.y=goal.y;draw();}
+    if(reduced.matches){robot.x=goal.x;robot.y=goal.y;}
+    draw();syncMotion();
   };
   document.querySelectorAll('[data-rover]').forEach(b=>b.addEventListener('click',()=>select(spots[b.dataset.rover],b.dataset.rover)));
   canvas.addEventListener('pointerdown',e=>{const r=canvas.getBoundingClientRect();select({x:Math.max(30,Math.min(670,(e.clientX-r.left)/r.width*700)),y:Math.max(80,Math.min(520,(e.clientY-r.top)/r.height*560))});});
-  pause.addEventListener('click',()=>{paused=!paused;pause.setAttribute('aria-pressed',String(paused));pause.textContent=paused?'Resume motion':'Pause motion';});
-  function draw(){
+  pause.addEventListener('click',()=>{paused=!paused;pause.setAttribute('aria-pressed',String(paused));pause.textContent=paused?'Resume motion':'Pause motion';syncMotion();});
+  function drawTerrain(ctx){
     ctx.clearRect(0,0,700,560);ctx.fillStyle='#131f19';ctx.fillRect(0,0,700,560);
     ctx.strokeStyle='#7c936b12';ctx.lineWidth=1;
     for(let x=0;x<700;x+=35){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,560);ctx.stroke();}
@@ -81,6 +82,11 @@
     }
     ctx.font='9px monospace';ctx.fillStyle='#7e9670';ctx.fillText('35° N / FIELD NOTES',22,535);ctx.fillText('ILLUSTRATIVE CONTROL PLAYGROUND',425,535);
     Object.values(spots).forEach(p=>{ctx.strokeStyle='#9eb58a';ctx.lineWidth=1;ctx.strokeRect(p.x-13,p.y-13,26,26);ctx.fillStyle='#c1c7a9';ctx.fillRect(p.x-3,p.y-3,6,6);ctx.font='10px monospace';ctx.fillStyle='#c0c5a7';ctx.fillText(p.label,p.x-35,p.y+34);});
+  }
+  const terrain=document.createElement('canvas');terrain.width=700;terrain.height=560;
+  drawTerrain(terrain.getContext('2d'));
+  function draw(){
+    ctx.clearRect(0,0,700,560);ctx.drawImage(terrain,0,0);
     ctx.beginPath();trail.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));ctx.strokeStyle='#dba46b88';ctx.lineWidth=2;ctx.stroke();
     ctx.setLineDash([4,7]);ctx.beginPath();ctx.moveTo(robot.x,robot.y);ctx.lineTo(goal.x,goal.y);ctx.strokeStyle='#e2af6855';ctx.lineWidth=1;ctx.stroke();ctx.setLineDash([]);
     ctx.strokeStyle='#e5b476';ctx.beginPath();ctx.arc(goal.x,goal.y,10,0,Math.PI*2);ctx.stroke();ctx.beginPath();ctx.moveTo(goal.x-16,goal.y);ctx.lineTo(goal.x+16,goal.y);ctx.moveTo(goal.x,goal.y-16);ctx.lineTo(goal.x,goal.y+16);ctx.stroke();
@@ -90,6 +96,7 @@
     ctx.fillStyle='#28382a';ctx.fillRect(-8,-6,10,12);ctx.fillStyle='#fff1c5';ctx.fillRect(13,-7,4,4);ctx.fillRect(13,3,4,4);ctx.restore();
   }
   function frame(t){
+    raf=0;
     let dt=Math.min((t-last)/1000,.05);last=t;
     if(inView&&!paused&&!reduced.matches&&document.visibilityState==='visible'){
       let dx=goal.x-robot.x,dy=goal.y-robot.y,dist=Math.hypot(dx,dy);
@@ -97,9 +104,17 @@
       else if(!arrived){arrived=true;status.textContent='Waypoint reached. The next move is yours.';}
     }
     if(inView&&!reduced.matches&&document.visibilityState==='visible')draw();
-    requestAnimationFrame(frame);
+    if(canRun())raf=requestAnimationFrame(frame);
   }
-  draw();requestAnimationFrame(frame);
+  function canRun(){return inView&&!paused&&!arrived&&!reduced.matches&&document.visibilityState==='visible';}
+  function syncMotion(){
+    if(canRun()&&!raf){last=performance.now();raf=requestAnimationFrame(frame);}
+    else if(!canRun()&&raf){cancelAnimationFrame(raf);raf=0;}
+  }
+  document.addEventListener('visibilitychange',syncMotion);
+  reduced.addEventListener('change',()=>{draw();syncMotion();});
+  if(!('IntersectionObserver' in window))inView=true;
+  draw();syncMotion();
 })();
 (() => {
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');

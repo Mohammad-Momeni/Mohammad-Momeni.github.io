@@ -6,7 +6,9 @@
   const base=new URL(library.querySelector('#memory-image').src);base.pathname=base.pathname.replace(/souls(?:-official)?\.webp$/,'');
   library.querySelectorAll('button[data-world]').forEach(button=>button.addEventListener('click',()=>{
     selected=button.dataset.world;const w=worlds[selected];const viewer=library.querySelector('.memory-viewer');viewer.dataset.world=selected;
-    const image=library.querySelector('#memory-image');image.src=new URL((selected==='souls'?'souls-official':selected)+'.webp',base).href;image.alt=w.alt;
+    const image=library.querySelector('#memory-image');const file=selected==='souls'?'souls-official':selected;
+    image.srcset=new URL(file+'-mobile.webp',base).href+' 800w, '+new URL(file+'.webp',base).href+' '+({souls:1920,elden:1200,lost:1600,robot:1280,leftovers:1280}[selected])+'w';
+    image.src=new URL(file+'.webp',base).href;image.alt=w.alt;
     ['category','index','title','credit','note'].forEach(key=>library.querySelector('#memory-'+key).textContent=w[key]);
     library.querySelector('#memory-discovery').textContent='';
     library.querySelectorAll('button[data-world]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
